@@ -127,6 +127,8 @@ views to see what is included. Check whether your data is complete and rendering
 If you find issues with data migration from moin 1.9 to 2, please check the
 moin2 issue tracker.
 
+If you experience slowdowns when trying to load a site, try using the "moin index-optimize"
+command to fix this issue.
 
 Keep your backups
 -----------------
