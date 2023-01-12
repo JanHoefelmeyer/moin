@@ -15,6 +15,7 @@ import codecs
 import hashlib
 import importlib
 from io import BytesIO
+import subprocess
 
 from flask import current_app as app
 from flask import g as flaskg
@@ -195,6 +196,9 @@ class ImportMoin19(Command):
         indexer.create()
         indexer.rebuild()
         indexer.open()
+
+        print("Cleaning up...")
+        subprocess.Popen("moin index-optimize")
 
         print("Finished conversion!")
 
